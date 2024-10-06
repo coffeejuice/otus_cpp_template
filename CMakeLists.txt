@@ -5,7 +5,7 @@ set(LESSON_NUMBER "1" CACHE INTERNAL "Lesson number")
 set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
 set(PROJECT_VERSION ${MONTH_NUMBER}.${LESSON_NUMBER}.${PATCH_VERSION})
 
-project(otus_cpp_training VERSION ${PROJECT_VERSION})
+project(helloworld VERSION ${PROJECT_VERSION})
 
 option(WITH_BOOST_TEST "Whether to build Boost test" ON)
 
@@ -15,7 +15,7 @@ add_executable(helloworld_cli main.cpp)
 add_library(helloworld lib.cpp)
 
 set_target_properties(helloworld_cli helloworld PROPERTIES
-    CXX_STANDARD 14
+    CXX_STANDARD 20
     CXX_STANDARD_REQUIRED ON
 )
 
@@ -32,7 +32,7 @@ if(WITH_BOOST_TEST)
     add_executable(test_version test_version.cpp)
 
     set_target_properties(test_version PROPERTIES
-        CXX_STANDARD 14
+        CXX_STANDARD 20
         CXX_STANDARD_REQUIRED ON
     )
 
@@ -79,7 +79,7 @@ set(CPACK_GENERATOR DEB)
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
 set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
 set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
-set(CPACK_PACKAGE_CONTACT example@example.com)
+set(CPACK_PACKAGE_CONTACT alex.troshin@outlook.com)
 include(CPack)
 
 if(WITH_BOOST_TEST)
