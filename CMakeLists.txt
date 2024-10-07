@@ -1,9 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 
-set(MONTH_NUMBER "1" CACHE_INTERNAL "Training month number")
-set(LESSON_NUMBER "1" CACHE INTERNAL "Lesson number")
 set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
-set(PROJECT_VERSION ${MONTH_NUMBER}.${LESSON_NUMBER}.${PATCH_VERSION})
+set(PROJECT_VERSION 0.0.${PATCH_VERSION})
 
 project(helloworld VERSION ${PROJECT_VERSION})
 
